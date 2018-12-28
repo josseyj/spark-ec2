@@ -8,7 +8,7 @@ if [ -d "tachyon" ]; then
   return 0
 fi
 
-TACHYON_VERSION=0.4.0
+TACHYON_VERSION=0.3.0
 
 # Github tag:
 if [[ "$TACHYON_VERSION" == *\|* ]]
@@ -32,7 +32,7 @@ else
   echo "Unpacking Tachyon"
   tar xvzf tachyon-*.tar.gz > /tmp/spark-ec2_tachyon.log
   rm tachyon-*.tar.gz
-  mv `ls -d tachyon-*` tachyon
+  mv `ls -d tachyon-*/*` tachyon/
 fi
 
 popd
