@@ -32,7 +32,7 @@ else
   echo "Unpacking Tachyon"
   tar xvzf tachyon-*.tar.gz > /tmp/spark-ec2_tachyon.log
   rm tachyon-*.tar.gz
-  mv `ls -d tachyon-*/*` tachyon/
+  mv -n `ls -d tachyon-*/*` tachyon/
 fi
 
 popd
