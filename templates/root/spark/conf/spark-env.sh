@@ -26,8 +26,8 @@ export SPARK_PUBLIC_DNS=`wget -q -O - http://169.254.169.254/latest/meta-data/pu
 
 export SPARK_MASTER_IP={{active_master}}
 
-export SPARK_CLASSPATH+=:/root/tachyon/target/tachyon-0.4.0-jar-with-dependencies.jar
-export ADD_JARS=/root/tachyon/target/tachyon-0.4.0-jar-with-dependencies.jar
+export SPARK_CLASSPATH+=:/root/tachyon/target/tachyon-*-jar-with-dependencies.jar
+export ADD_JARS=/root/tachyon/target/tachyon-*-jar-with-dependencies.jar
 
 # Use the Spark cluster url is $MASTER is not set
 export MASTER=${MASTER-`cat /root/spark-ec2/cluster-url`}
